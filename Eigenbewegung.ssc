@@ -1,0 +1,37 @@
+//  vim: ft=javascript
+//
+//  \about\Stellarium\API\runScript.bat Eigenbewegung.ssc
+//  
+//       ( runScript.bat: https://github.com/ReneNyffenegger/about-Stellarium/tree/master/API )
+//
+//  ------------------------------------------------------
+//
+//  Barnards Pfeilstern weist die bislang größte bekannte Eigenbewegung von
+//  10,3 Bogensekunden pro Jahr auf.
+//
+
+
+LandscapeMgr.setFlagLandscape(false);
+
+core.setDate(
+  '2014-07-11T01:15:00',
+  'local'              , // or 'utc'
+   true                  // enable Delta T correction
+);
+
+core.setMountMode("equatorial");
+StelMovementMgr.zoomTo(4, 0.01);
+LandscapeMgr.setFlagAtmosphere(false);
+
+//core.setTimeRate(0);
+core.wait(0.01);
+core.selectObjectByName("Barnard's star");
+core.setSelectedObjectInfo("ShortInfo");
+// core.selectObjectByName("HIP 87937", true);
+StelMovementMgr.setFlagTracking(true);
+core.wait(2);
+
+for (var i=0 ; i< 100; i++) {
+  core.setDate("+ 4 years sidereal", null, true);
+  core.wait(0.1);
+}
