@@ -1,0 +1,16 @@
+http://cds.u-strasbg.fr/twikiAIDA/pub/EuroVOAIDA/WP5WorkProgrammeUsecases/Proper_motion_stellarium.pdf
+
+http://www.stellarium.org/wiki/index.php/Astronomical_Concepts
+
+http://spiff.rit.edu/classes/phys445/lectures/astrom/astrom.html
+
+http://en.wikipedia.org/wiki/Galactic_coordinate_system
+
+http://fossies.org/linux/stellarium/scripts/tests/goto.ssc
+https://github.com/EvilTosha/Stellarium-GSoC12/blob/master/scripts/tests/goto.ssc
+
+core.setSelectedObjectInfo ("None");
+
+core.setProjectionMode("ProjectionEqualArea");
+
+
